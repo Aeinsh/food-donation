@@ -1,0 +1,10 @@
+/* Add section visibility and map placeholder styles */
+section {
+    margin-top: 20px;
+}
+
+#mapView {
+    padding: 20px;
+    text-align: center;
+    background-color: #e9ecef;
+}

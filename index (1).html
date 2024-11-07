@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- User Registration Form -->
+    <section class="registration">
+        <h1>Food Waste Management - Register</h1>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+    </section>
+
+    <!-- Food Donation Form (appears after registration) -->
+    <section class="donation" id="donationForm" style="display: none;">
+        <h1>Donate Food</h1>
+        <form>
+            <label for="foodType">Food Type:</label>
+            <input type="text" id="foodType" name="foodType" required>
+
+            <label for="foodQuantity">Food Quantity:</label>
+            <input type="text" id="foodQuantity" name="foodQuantity" required>
+
+            <label for="foodLocation">Food Location:</label>
+            <input type="text" id="foodLocation" name="foodLocation" required>
+
+            <label for="nearbyAreas">Nearby Areas:</label>
+            <input type="text" id="nearbyAreas" name="nearbyAreas" required>
+
+            <label for="contactInfo">Contact Info:</label>
+            <input type="text" id="contactInfo" name="contactInfo" required>
+
+            <button type="button" onclick="submitDonation()">Submit Donation</button>
+        </form>
+    </section>
+
+    <!-- Waste Entry Form -->
+    <section class="waste-entry" id="wasteEntryForm" style="display: none;">
+        <h1>Waste Entry</h1>
+        <form>
+            <label for="wasteType">Waste Type:</label>
+            <input type="text" id="wasteType" name="wasteType" required>
+
+            <label for="wasteQuantity">Waste Quantity:</label>
+            <input type="text" id="wasteQuantity" name="wasteQuantity" required>
+
+            <button type="button" onclick="submitWasteEntry()">Submit Waste Entry</button>
+        </form>
+    </section>
+
+    <!-- Display Food and Waste Entries -->
+    <section class="food-list" id="foodList" style="display: none;">
+        <h1>Available Food Donations</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Food Type</th>
+                    <th>Quantity</th>
+                    <th>Location</th>
+                    <th>Nearby Areas</th>
+                    <th>Contact Info</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="foodEntries"></tbody>
+        </table>
+    </section>
+
+    <section class="waste-list" id="wasteList" style="display: none;">
+        <h1>Waste Entries</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Waste Type</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="wasteEntries"></tbody>
+        </table>
+    </section>
+
+    <!-- Analytics and Notifications -->
+    <section id="analytics" style="display: none;">
+        <h1>Analytics</h1>
+        <p id="analyticsData"></p>
+    </section>
+
+    <!-- Map view for Nearby Organizations -->
+    <section id="mapView" style="display: none;">
+        <h1>Nearby Organizations</h1>
+        <p>Map view coming soon...</p> <!-- Placeholder for map integration -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
